@@ -43,16 +43,72 @@ In T flip flop, "T" defines the term "Toggle". In SR Flip Flop, we provide only 
 
 
 ## Program:
+~~~
+1.	SR Flipflop
+module srf(s,r,clk,q,qbar);
+input s,r,clk;
+output reg q;
+output qbar;
+always@(posedge clk)
+begin
+q= s|((~r)&q);
+end
+assign qbar=~q;
+endmodule
 
+2.	D Flipflop
+module Df(d,clk,q,qbar);
+input d,clk;
+output reg q;
+output qbar;
+always@(posedge clk)
+begin
+q=d;
+end
+assign qbar=~q;
+endmodule
+
+3.JK flip flop
+module jk(j,k,clk,q,qbar);
+input j,k,clk;
+output q,qbar;
+reg q,qbar;
+always @(posedge clk)
+begin
+q<=(j&~q)|(~k&q);
+qbar<=~q;
+end
+endmodule
+
+4.T flip flop
+module t(t,clk,q,qbar);
+input t,clk;
+output reg q;
+output qbar;
+always@(posedge clk)
+begin
+q=((~q)&t)|(q&(~t));
+end
+assign qbar=~q;
+endmodule
 
 ## RTL Schematic:
+1.	SR Flipflop
+
+![image](https://github.com/MOHAMEDGOWS/Flipflops/assets/117954463/ff366d3c-04f0-4dfd-a02a-299b987d09f6)
+
+2.	D Flipflop
 
 
 
 
 ## Timing Diagram:
+1.	SR Flipflop
+![Uploading Screenshot 2023-06-07 214833.png…]()
 
 
+
+2.	D Flipflop
 
 ## Result:
 Thus the SR, D, JK and T flipflops are implemented and the characteristic tables are verified.
