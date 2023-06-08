@@ -44,7 +44,7 @@ In T flip flop, "T" defines the term "Toggle". In SR Flip Flop, we provide only 
 
 ## Program:
 ~~~
-1.	SR Flipflop
+1.SR Flipflop
 module srf(s,r,clk,q,qbar);
 input s,r,clk;
 output reg q;
@@ -56,7 +56,7 @@ end
 assign qbar=~q;
 endmodule
 
-2.	D Flipflop
+2.D Flipflop
 module Df(d,clk,q,qbar);
 input d,clk;
 output reg q;
@@ -91,7 +91,7 @@ q=((~q)&t)|(q&(~t));
 end
 assign qbar=~q;
 endmodule
-
+~~~
 ## RTL Schematic:
 1.	SR Flipflop
 
@@ -99,16 +99,33 @@ endmodule
 
 2.	D Flipflop
 
+![rtl dff](https://github.com/MOHAMEDGOWS/Flipflops/assets/117954463/046f6d3e-9956-44e9-9772-0a10a4ceeeaf)
+
+3.JK flip flop
+
+![Screenshot 2023-06-08 101714](https://github.com/MOHAMEDGOWS/Flipflops/assets/117954463/d90e9918-5cd4-4b06-b9a9-ac94f73a28d8)
+
+4.T flip flop
+
+![Screenshot 2023-06-08 110024](https://github.com/MOHAMEDGOWS/Flipflops/assets/117954463/a13c93fd-7a7d-417c-8d7c-238d35f6f483)
+
 
 
 
 ## Timing Diagram:
 1.	SR Flipflop
-![Uploading Screenshot 2023-06-07 214833.png…]()
 
-
+![Screenshot 2023-06-07 214833](https://github.com/MOHAMEDGOWS/Flipflops/assets/117954463/df0f85f2-a6f6-4a5b-ad30-3635e726b7fe)
 
 2.	D Flipflop
+![Screenshot 2023-06-08 104449](https://github.com/MOHAMEDGOWS/Flipflops/assets/117954463/c3d12f56-3486-4a9f-a215-ad382bcf9ae8)
+
+3.JK flip flop
+![Screenshot 2023-06-08 103218](https://github.com/MOHAMEDGOWS/Flipflops/assets/117954463/d826e036-294f-4b63-84f4-0adc31b70f63)
+
+4.T flip flop
+![Screenshot 2023-06-08 110205](https://github.com/MOHAMEDGOWS/Flipflops/assets/117954463/df3c73e9-6baa-4486-a4a7-d06869ec15ea)
+
 
 ## Result:
 Thus the SR, D, JK and T flipflops are implemented and the characteristic tables are verified.
